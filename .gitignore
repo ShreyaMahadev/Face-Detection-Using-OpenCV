@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+*.log
+
+# Virtual Environments
+.env/
+.venv/
+env/
+venv/
+
+# Jupyter Notebooks Checkpoints
+.ipynb_checkpoints/
+
+# Mac and VS Code
+.DS_Store
+.vscode/
+
+# Streamlit cache
+.streamlit/
+.cache/
+
+# Face detection output
+detected_faces/
+*.zip

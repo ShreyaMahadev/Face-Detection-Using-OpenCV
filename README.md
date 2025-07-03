@@ -1,42 +1,44 @@
-# Face Detection using OpenCV
+# Face Detection App using OpenCV & Streamlit
 
-This project demonstrates real-time face detection using OpenCV and a webcam. It uses Haar Cascade classifiers to detect faces in video frames captured from your computer's default camera.
+A simple web app for detecting faces in images or webcam feed, built with Streamlit and OpenCV. Upload images or use your webcam, detect faces, and download all cropped face images as a ZIP file.
 
 ## Features
-- Real-time face detection using your webcam
-- Draws rectangles around detected faces
-- Simple and easy-to-understand code
+- Upload one or more images and detect faces in each
+- Use your webcam for live face detection
+- Cropped faces are saved and can be downloaded as a ZIP
+- Easy-to-use web interface
 
 ## Requirements
 - Python 3.x
-- OpenCV (`opencv-python`)
+- streamlit
+- opencv-python
+- numpy
+- pillow
 
 ## Installation
 1. Clone or download this repository.
-2. Install the required Python package:
+2. Install the required packages:
    ```bash
-   pip install opencv-python
+   pip install streamlit opencv-python numpy pillow
    ```
 
 ## Usage
-1. Make sure your webcam is connected.
-2. Run the script:
+1. Run the Streamlit app:
    ```bash
-   python face_detection.py
+   streamlit run app.py
    ```
-3. A window will open showing the webcam feed with rectangles drawn around detected faces.
-4. Press `q` to quit the application.
+2. Open the provided local URL in your browser.
+3. Choose between **Upload Images** or **Use Webcam**.
+4. For uploads, select one or more images (JPG, JPEG, PNG).
+5. For webcam, turn on the webcam and allow access.
+6. Detected faces will be highlighted and cropped.
+7. Download all cropped faces as a ZIP file if faces are detected.
 
 ## How it works
-- Loads the Haar Cascade classifier for face detection.
-- Captures video from the default webcam.
-- Converts each frame to grayscale and detects faces.
-- Draws a green rectangle around each detected face.
-- Displays the video feed in a window.
-
-## Troubleshooting
-- If you see "Error: Could not open webcam.", ensure your webcam is connected and not being used by another application.
-- If you have issues with the Haar Cascade file, make sure OpenCV is installed correctly.
+- Uses OpenCV's Haar Cascade for face detection
+- Draws rectangles around detected faces
+- Crops and saves each detected face
+- Provides a download button for all cropped faces
 
 ## License
 This project is for educational purposes.
